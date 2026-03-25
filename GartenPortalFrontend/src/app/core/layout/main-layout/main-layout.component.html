@@ -1,0 +1,59 @@
+<div class="layout-shell">
+  <header class="layout-header">
+    <div class="container-shell header-inner">
+      <a class="brand" href="#" aria-label="Startseite">
+        <span class="brand-mark">GP</span>
+        <span>GartenPortal</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Hauptnavigation">
+        @for (link of links; track link.href) {
+          <a [href]="link.href">{{ link.label }}</a>
+        }
+        <app-button href="#gaerten" label="Jetzt bewerben"></app-button>
+      </nav>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        [attr.aria-expanded]="menuOpen()"
+        aria-label="Menü öffnen"
+        (click)="toggleMenu()"
+      >
+        @if (menuOpen()) {
+          <span>&times;</span>
+        } @else {
+          <span>&#9776;</span>
+        }
+      </button>
+    </div>
+
+    @if (menuOpen()) {
+      <nav class="mobile-nav" aria-label="Mobile Navigation">
+        <div class="container-shell mobile-nav-inner">
+          @for (link of links; track link.href) {
+            <a [href]="link.href" (click)="closeMenu()">{{ link.label }}</a>
+          }
+          <app-button
+            href="#gaerten"
+            label="Jetzt bewerben"
+            [fullWidth]="true"
+            (buttonClick)="closeMenu()"
+          ></app-button>
+        </div>
+      </nav>
+    }
+  </header>
+
+  <main class="layout-content">
+    <router-outlet />
+  </main>
+
+  <footer class="layout-footer">
+    <div class="container-shell footer-inner">
+      <p class="footer-brand">Kleingartenverein Musterstadt e.V.</p>
+      <p>Musterstraße 42, 12345 Musterstadt · info&#64;gartenverein.de</p>
+      <p>&copy; {{ currentYear }} Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+</div>

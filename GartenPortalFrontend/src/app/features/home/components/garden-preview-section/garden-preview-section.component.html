@@ -1,0 +1,22 @@
+<section id="gaerten" class="page-section">
+  <div class="container-shell">
+    <app-section-title
+      title="Freie Gärten"
+      subtitle="Entdecke unsere aktuell verfügbaren Parzellen und finde deinen Traumgarten."
+    />
+
+    <div class="gardens-grid">
+      @for (garden of gardens; track garden.id) {
+        <app-garden-card [garden]="garden" />
+      }
+    </div>
+
+    <div class="gardens-action">
+      <app-button
+        href="#gaerten"
+        label="Alle freien Gärten anzeigen"
+        variant="outline"
+      ></app-button>
+    </div>
+  </div>
+</section>

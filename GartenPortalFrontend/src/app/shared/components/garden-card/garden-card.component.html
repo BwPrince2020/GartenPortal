@@ -1,0 +1,9 @@
+<article class="garden-card surface-card">
+  <img [src]="garden.imageUrl" [alt]="garden.name" />
+  <div class="garden-card-content">
+    <h3>{{ garden.name }}</h3>
+    <p>{{ garden.size }}</p>
+    <strong>{{ garden.price }}</strong>
+    <app-button [fullWidth]="true" label="Details ansehen"></app-button>
+  </div>
+</article>

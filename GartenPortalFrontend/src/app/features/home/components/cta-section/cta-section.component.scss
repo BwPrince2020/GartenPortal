@@ -1,0 +1,29 @@
+.cta-section {
+  padding: 6rem 0;
+}
+
+.cta-inner {
+  display: grid;
+  gap: 1.75rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.cta-inner h2 {
+  max-width: 30rem;
+  font-size: clamp(2.2rem, 4vw, 3.3rem);
+  line-height: 1.15;
+  font-weight: 800;
+  color: hsl(var(--accent));
+}
+
+.cta-inner p {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: color-mix(in srgb, hsl(var(--foreground)) 78%, transparent);
+}
+
+.cta-inner app-button {
+  transform: scale(0.92);
+  transform-origin: center top;
+}

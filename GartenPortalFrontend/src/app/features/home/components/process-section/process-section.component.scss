@@ -1,0 +1,42 @@
+.steps-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.step-item {
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.step-number {
+  display: grid;
+  place-items: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 999px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  box-shadow: var(--shadow-card);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+.step-item h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.step-item p {
+  max-width: 18rem;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+  .steps-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

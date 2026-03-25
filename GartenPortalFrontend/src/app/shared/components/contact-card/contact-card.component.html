@@ -1,0 +1,7 @@
+<article class="contact-card surface-card">
+  <div class="avatar">{{ initials }}</div>
+  <h3>{{ contact.name }}</h3>
+  <p class="role">{{ contact.role }}</p>
+  <a [href]="'mailto:' + contact.email">{{ contact.email }}</a>
+  <a [href]="'tel:' + contact.phone">{{ contact.phone }}</a>
+</article>

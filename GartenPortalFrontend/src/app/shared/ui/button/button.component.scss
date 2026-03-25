@@ -1,0 +1,67 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 0.9rem;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  padding: 0.85rem 1.3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  box-shadow: 0 10px 22px rgba(54, 92, 40, 0.14);
+  transition:
+    transform 220ms ease,
+    background-color 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease,
+    box-shadow 220ms ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(54, 92, 40, 0.18);
+}
+
+.button:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 3px;
+}
+
+.button-secondary {
+  background: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+.button-secondary:hover {
+  transform: scale(1.05);
+  background: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+  box-shadow: 0 16px 30px rgba(35, 90, 49, 0.22);
+}
+
+.button-outline {
+  border-width: 2px;
+  border-color: hsl(var(--accent));
+  background: transparent;
+  color: hsl(var(--accent));
+  box-shadow: none;
+}
+
+.button-outline:hover {
+  background: hsl(var(--accent));
+  border-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(35, 90, 49, 0.16);
+}
+
+.button:not(.button-outline):not(.button-secondary):hover {
+  background: hsl(var(--accent));
+}
+
+.button-full {
+  width: 100%;
+}

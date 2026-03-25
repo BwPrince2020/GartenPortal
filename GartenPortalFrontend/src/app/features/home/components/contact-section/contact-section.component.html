@@ -1,0 +1,11 @@
+<section id="team" class="page-section">
+  <div class="container-shell">
+    <app-section-title title="Ansprechpartner" />
+
+    <div class="contacts-grid">
+      @for (contact of contacts; track contact.email) {
+        <app-contact-card [contact]="contact" />
+      }
+    </div>
+  </div>
+</section>

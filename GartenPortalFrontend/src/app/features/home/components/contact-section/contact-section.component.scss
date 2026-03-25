@@ -1,0 +1,10 @@
+.contacts-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .contacts-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

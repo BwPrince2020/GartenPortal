@@ -1,0 +1,15 @@
+<section class="page-section garden-gradient-subtle">
+  <div class="container-shell">
+    <app-section-title title="So funktioniert's" />
+
+    <div class="steps-grid">
+      @for (step of steps; track step.number) {
+        <article class="step-item">
+          <div class="step-number">{{ step.number }}</div>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.text }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>

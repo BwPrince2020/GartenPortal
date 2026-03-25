@@ -1,0 +1,129 @@
+:host {
+  display: block;
+}
+
+.layout-shell {
+  min-height: 100vh;
+  background: hsl(var(--background));
+}
+
+.layout-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(16px);
+  background: rgba(250, 253, 248, 0.8);
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 4rem;
+  gap: 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: hsl(var(--accent));
+}
+
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  box-shadow: var(--shadow-card);
+}
+
+.desktop-nav {
+  display: none;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.desktop-nav a {
+  color: color-mix(in srgb, hsl(var(--foreground)) 78%, transparent);
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: color 180ms ease;
+}
+
+.desktop-nav a:hover {
+  color: hsl(var(--primary));
+}
+
+.menu-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.8rem;
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.mobile-nav {
+  border-top: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+
+.mobile-nav-inner {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem 0 1.25rem;
+}
+
+.mobile-nav-inner a {
+  padding: 0.35rem 0;
+  font-weight: 700;
+}
+
+.layout-footer {
+  background: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+  padding: 2.75rem 0;
+}
+
+.footer-inner {
+  display: grid;
+  gap: 0.4rem;
+  text-align: center;
+}
+
+.footer-brand {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: inline-flex;
+  }
+
+  .header-inner {
+    min-height: 4.25rem;
+  }
+
+  .menu-toggle,
+  .mobile-nav {
+    display: none;
+  }
+}
